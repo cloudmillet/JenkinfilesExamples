@@ -11,3 +11,12 @@ pipeline {
         }
     }
 }
+
+
+
+/*
+https://plugins.jenkins.io/docker-plugin/
+https://stackoverflow.com/questions/27763340/docker-opts-do-not-work-in-config-file-etc-default-docker
+
+
+*/
