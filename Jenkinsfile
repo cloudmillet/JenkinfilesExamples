@@ -31,16 +31,16 @@ pipeline {
                            }
                            }
                             stage('Integration test') {
-                              agent {
-                                    docker {
-                                            reuseNode true
-                                            image 'alpine'
-                                           }
-                                    }
+                           //   agent {
+                           //         docker {
+                           //                 reuseNode true
+                           //                 image 'alpine'
+                           //                }
+                           //         }
                               steps {
                                 echo "Running the integration test..."
-                              }
-                           }
+                             }
+                            }
                            }
                            }
               }
