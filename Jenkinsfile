@@ -5,7 +5,7 @@ pipeline {
          stages {
                  stage('One') {
                  steps {
-                     echo 'Hi, this is Junkins Example Pipe line  - Jenkinsfile from  cloudmillet
+                     echo 'Hi, this is Junkins Example Pipe line  - Jenkinsfile from  cloudmillet'
                  }
                  }
                  stage('Two') {
