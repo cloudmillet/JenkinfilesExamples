@@ -7,7 +7,7 @@ pipeline {
                 docker { image 'store/oracle/database-enterprise:12.2.0.1-slim' }
             }
             steps {
-                sh 'mvn --version'
+                sh 'sqlplus -version'
             }
         }
         stage('Front-end') {
