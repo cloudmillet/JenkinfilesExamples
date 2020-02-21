@@ -6,14 +6,13 @@ pipeline {
             steps {
               script{
                     docker_login='${docker-registry-login}'
-                    ZIP_NODE='abcdefgh-0.0.${CODE_VERSION}.zip'
                 }
                 
             }
         }
         stage('Docker pull') {
             steps {
-               docker.withRegistry('https://index.docker.io/v1/', "${docker_login}") {
+               docker.withRegistry('https://index.docker.io/v1/', docker_login) {
                     DBimage = docker.image("store/oracle/database-enterprise:12.2.0.1-slim")
                     DBimage.pull()
                   
