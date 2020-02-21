@@ -12,5 +12,15 @@ pipeline {
                 sh 'mvn -B'
             }
         }
+        stage('Docker pull') {
+            steps {
+               docker.withRegistry('https://docker.example.com/', 'docker-registry-login') {
+                    DBimage = docker.build(${imageTag})
+                    DBimage.pull("${variables.version}")
+               }
+                sh 'mvn -B'
+            }
+        }
     }
+
 }
