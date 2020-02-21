@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'maven:3-alpine' }
+                docker { image 'store/oracle/database-enterprise:12.2.0.1-slim' }
             }
             steps {
                 sh 'mvn --version'
